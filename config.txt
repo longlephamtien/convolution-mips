@@ -1,0 +1,8 @@
+# Configuration file for convolution testing
+regenerate_input = False        # False: reuse existing test cases if available, True: generate new test cases
+cpp_file = convolution.cpp       # Your C++ implementation file for generating reference outputs
+exe_name = convolution           # Name of compiled C++ executable
+num_tests = 250                 # Number of test cases to generate/run
+mars_jar = Mars4_5.jar           # Path to MARS MIPS simulator JAR file
+asm_file = convolution.asm             # Your MIPS assembly implementation file
+epsilon = 0.001                 # Maximum allowed difference between C++ and ASM outputs (1e-4 is suggested)

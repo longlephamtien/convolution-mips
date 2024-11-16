@@ -119,7 +119,7 @@ int main() {
     }
     
     if (N < 3 || N > 7 || M < 2 || M > 4 || p < 0 || p > 4 || s < 1 || s > 3) {
-        writeError("Invalid parameters");
+        writeError("Invalid parameter");
         fclose(inFile);
         return 1;
     }

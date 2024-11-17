@@ -608,6 +608,7 @@ write_file:
     syscall
     
     j    exit              # Exit program when done writing
+
 exit:
     li   $v0, 10          # Exit program
     syscall
@@ -662,6 +663,7 @@ read_int_finish:
     # Apply negative sign if needed
     beqz $t6, read_int_return
     neg  $v0, $v0
+
 read_int_return:
     jr   $ra
 
@@ -736,7 +738,3 @@ set_decimal:
     l.s   $f4, float_point_one  # Initialize decimal position
     addi  $s0, $s0, 1         # Move to next character
     j     read_float_loop
-
-skip_negate:
-    addi  $s0, $s0, 1         # Skip delimiter
-    jr    $ra
